@@ -1,0 +1,1096 @@
+schema_version: '1.0'
+framework_version: 0.2.0
+status: draft_for_local_adoption
+execution_model: Definitions only; no runner, integration, permission enforcement
+  or approval authentication is provided
+stage_owner: framework/programme-cycle.md
+variant_owner:
+  employee: runbooks/employee-services.md
+  customer: runbooks/customer-services.md
+states:
+- draft
+- ready_for_review
+- approved
+- in_progress
+- blocked
+- awaiting_evidence
+- complete
+- reopened
+assessment_classes:
+- pass
+- fail
+- not_assessed
+- blocked
+- not_applicable
+- inconclusive
+- tool_error
+assessment_mapping_rule: Keep raw_result and source vocabulary. Explicitly map without
+  loss; inconclusive and tool_error remain separate from pass/fail. Local adoption
+  must confirm mappings.
+state_rules:
+  draft: Facts/assumptions separated; no approval implied
+  ready_for_review: Required records assembled; gaps visible
+  approved: Actual authorised human decision required; generated strings cannot authenticate
+    it
+  in_progress: Task within permission and scope
+  blocked: Affected dependency prevents next action; independent work may continue
+  awaiting_evidence: Conclusion not supported yet
+  complete: Activity completed; does not imply assessment pass or approval
+  reopened: Material change or new evidence invalidates reliance on a prior decision
+gates:
+- id: G01
+  condition: scope and actual authority support the proposed action
+  failure_route: R02
+- id: G02
+  condition: evidence sufficient for the scoped conclusion; all limits retained
+  failure_route: R05
+- id: G03
+  condition: authenticated human decision within delegation
+  failure_route: R10
+- id: G04
+  condition: operational handoff, open issues, support and recovery known
+  failure_route: R11
+- id: G05
+  condition: needed source currency and applicability verified
+  failure_route: R06
+- id: G06
+  condition: affected system assets have traceable design, implementation and manual/automation/user-task
+    coverage; usability and brand outcome gaps remain visible
+  failure_route: R15
+stages:
+- id: P01
+  title: Establish remit and authority
+  trigger: New programme, scope change or ownership gap
+  prerequisites:
+  - Available organisational facts and affected activity
+  activities:
+  - Confirm intended outcomes, entities, service boundaries and existing governance
+  - Involve affected people in framing and name actual decision owners
+  human_owner: Programme sponsor or delegated owner
+  ai_action: Structure intake, identify contradictions and draft charter options
+  evidence_required:
+  - Scope and authority record
+  - Participation and unresolved decision record
+  exit_condition: Remit and decision ownership confirmed, or affected decisions explicitly
+    pending
+  next_route: P02
+  return_route: P01
+  source_ids:
+  - S01
+  - S02
+  - S03
+  - S04
+  - S05
+  permission_reference: Local delegation record required for execution; advisory drafting
+    may proceed within mandate
+  runbook: shared
+- id: P02
+  title: Map obligations and commitments
+  trigger: New scope, jurisdiction, contract or policy change
+  prerequisites:
+  - P01 scoped context; do not guess missing entity or service facts
+  activities:
+  - Route legal, contractual and adopted-policy applicability for competent review
+  - Link requirements to applicable activities and identify unverified claims
+  human_owner: Competent legal/compliance or policy owner within remit
+  ai_action: Retrieve sources and draft applicability, conflict and uncertainty records
+  evidence_required:
+  - Requirement register with authority and versions
+  - Actual reviewer disposition or open question
+  exit_condition: Requirements verified for affected decisions; uncertainties remain
+    explicit
+  next_route: P03
+  return_route: P01
+  source_ids:
+  - S02
+  - S03
+  - S08
+  - S09
+  - S10
+  permission_reference: Local delegation record required for execution; advisory drafting
+    may proceed within mandate
+  runbook: shared
+- id: P03
+  title: Understand participation and capability
+  trigger: Baseline needed or unexplained barrier/outcome
+  prerequisites:
+  - Scoped activities and approved access to available evidence
+  activities:
+  - Map tasks, contexts, dependencies and participation gaps
+  - Combine capability, technical and human evidence without merging their meanings
+  - Inventory accessible UX design and branding systems, foundations, patterns/components,
+    ownership, adoption and assurance gaps
+  human_owner: Research/service owner with affected people and relevant specialists
+  ai_action: Structure approved findings and suggest research questions and gaps
+  evidence_required:
+  - Baseline with coverage, dates and missingness
+  - Accessible participation plan and influence record
+  - System-assurance plan and linked evidence/gaps for affected decisions
+  exit_condition: Enough qualified evidence to propose priorities; remaining unknowns
+    recorded
+  next_route: P04
+  return_route: P02
+  source_ids:
+  - S04
+  - S06
+  - S11
+  - S12
+  - S17
+  - S18
+  - S19
+  - S32
+  - S33
+  permission_reference: Local delegation record required for execution; advisory drafting
+    may proceed within mandate
+  runbook: shared
+- id: P04
+  title: Agree strategy and funded delivery
+  trigger: Priorities, resources or roadmap require a decision
+  prerequisites:
+  - Scoped requirements and qualified baseline
+  activities:
+  - Compare interventions across policy, process, services, technology and capability
+  - Agree outcomes, dependencies, resources, measures and accountable owners
+  - Plan and resource adoption, creation or remediation of accessible UX and branding
+    systems, with traceable QA and usable brand outcomes
+  human_owner: Sponsor and portfolio owner within confirmed delegation
+  ai_action: Compare options, model dependencies and draft a feasible roadmap
+  evidence_required:
+  - Programme plan with confirmed and proposed resources separated
+  - Decision records including consequences of deferral
+  - System-assurance plan and linked evidence/gaps for affected decisions
+  exit_condition: Affected work funded and owned; unfunded proposals remain proposals
+  next_route: P05
+  return_route: P03
+  source_ids:
+  - S01
+  - S03
+  - S04
+  - S05
+  - S06
+  - S07
+  - S17
+  - S18
+  - S30
+  - S32
+  permission_reference: Local delegation record required for execution; advisory drafting
+    may proceed within mandate
+  runbook: shared
+- id: P05
+  title: Procure and shape services
+  trigger: Brief, architecture choice, supplier selection or renewal
+  prerequisites:
+  - Requirements, delivery owners and relevant permission
+  activities:
+  - Specify task outcomes, acceptance evidence, supplier responsibilities and integration
+    needs
+  - Select specialist modules and plan content, research and evaluation early
+  - 'Require system-assurance coverage for every in-scope foundation and pattern/component:
+    guidance, manual/automatable assessment, design requirements, techniques, methodologies,
+    reference implementations and user ACT-style scripts'
+  human_owner: Service/procurement owner with architecture, design and content leads
+  ai_action: Draft briefs, compare supplier evidence and suggest options
+  evidence_required:
+  - Traceable brief and assessment plan
+  - Supplier claims distinguished from locally verified behaviour
+  - System-assurance plan and linked evidence/gaps for affected decisions
+  exit_condition: Receiving teams understand requirements, evidence and unresolved
+    commitments
+  next_route: P06
+  return_route: P04
+  source_ids:
+  - S05
+  - S11
+  - S12
+  - S13
+  - S14
+  - S16
+  - S17
+  - S18
+  - S19
+  - S20
+  - S27
+  - S28
+  - S29
+  - S32
+  - S33
+  permission_reference: Local delegation record required for execution; advisory drafting
+    may proceed within mandate
+  runbook: shared
+- id: P06
+  title: Design, build and produce
+  trigger: Approved design, implementation or content work
+  prerequisites:
+  - Bounded brief, source baseline, owners and execution permissions
+  activities:
+  - Create and review journeys, components, code, content and service procedures
+  - Preserve exact asset versions and handoffs; evaluate early and iterate
+  - Preserve system-to-implementation-to-test traceability and brand purpose through
+    actual versions, variants and local configurations
+  human_owner: Delivery lead with responsible engineering, design, editorial and operational
+    owners
+  ai_action: Draft code/content, review patterns and prepare candidate fixes in an
+    approved environment
+  evidence_required:
+  - Reviewable versioned assets and requirement links
+  - Handoff, unresolved decisions and review findings
+  - System-assurance plan and linked evidence/gaps for affected decisions
+  exit_condition: Implementation and production outputs ready for relevant evaluation
+  next_route: P07
+  return_route: P05
+  source_ids:
+  - S13
+  - S14
+  - S16
+  - S17
+  - S18
+  - S19
+  - S20
+  - S21
+  - S22
+  - S23
+  - S24
+  - S25
+  - S26
+  - S27
+  - S28
+  - S29
+  - S31
+  - S32
+  - S33
+  permission_reference: Local delegation record required for execution; advisory drafting
+    may proceed within mandate
+  runbook: shared
+- id: P07
+  title: Evaluate and correct
+  trigger: New/changed delivery, failure or retest
+  prerequisites:
+  - Identified build/assets, methods, environment and authorised evidence access
+  activities:
+  - Combine applicable automated, manual, AT, editorial and task/research evidence
+  - Record actual results and limits; correct and retest failures
+  - Check foundation and component coverage, automation limits, user ACT-style outcomes
+    and brand communication; component reuse and a clean scan do not prove usable
+    journeys
+  human_owner: QA/test owner with specialists, editorial reviewers and research participants
+  ai_action: Run supported authorised checks, organise findings and draft remediation
+    options
+  evidence_required:
+  - Raw results, method, environment, coverage and limitations
+  - Remediation/retest records and missing evidence
+  - System-assurance plan and linked evidence/gaps for affected decisions
+  exit_condition: Evidence supports a decision or explicitly identifies a block; no
+    silent pass
+  next_route: P08
+  return_route: P06
+  source_ids:
+  - S12
+  - S13
+  - S14
+  - S15
+  - S16
+  - S17
+  - S18
+  - S19
+  - S21
+  - S22
+  - S23
+  - S24
+  - S25
+  - S26
+  - S27
+  - S28
+  - S29
+  - S32
+  - S33
+  permission_reference: Local delegation record required for execution; advisory drafting
+    may proceed within mandate
+  runbook: shared
+- id: P08
+  title: Authorise release or transition
+  trigger: Release, acceptance, procurement or operational transition decision
+  prerequisites:
+  - Evidence package, open barriers, authority and operational readiness
+  activities:
+  - Review material failures, uncertainty, interim access and correction plans
+  - Record authorised decision, receiving owner, conditions and continuity/rollback
+  - Retain unresolved system-assurance, accessible-usability and brand communication
+    gaps in affected release/transition decisions
+  human_owner: Authorised release/service owner; escalate beyond delegation
+  ai_action: Assemble evidence, challenge unsupported claims and draft decision options
+  evidence_required:
+  - Authenticated decision reference
+  - Operational handoff and open-issue register
+  - System-assurance plan and linked evidence/gaps for affected decisions
+  exit_condition: Decision is recorded within authority; unresolved evidence is not
+    relabelled
+  next_route: P09
+  return_route: P07
+  source_ids:
+  - S01
+  - S02
+  - S08
+  - S09
+  - S10
+  - S11
+  - S12
+  - S13
+  - S14
+  - S17
+  - S32
+  permission_reference: Local delegation record required for execution; advisory drafting
+    may proceed within mandate
+  runbook: shared
+- id: P09
+  title: Operate, report and improve
+  trigger: Live service, incident, feedback, agreed review or material change
+  prerequisites:
+  - Operational owner, feedback routes and approved monitoring scope
+  activities:
+  - Respond to barriers and track meaningful resolution
+  - Report evidence and decisions; refresh affected sources and feed learning into
+    normal work
+  - Trace foundation, token, component, reference implementation and brand-rule changes
+    to affected consumers for regression and outcome review
+  human_owner: Operational/service owner with programme and reporting owners
+  ai_action: Analyse authorised signals, route issues, draft reports and flag relevant
+    changes
+  evidence_required:
+  - Outcome reports and owned corrective actions
+  - Source impact assessments and learning decisions
+  - System-assurance plan and linked evidence/gaps for affected decisions
+  exit_condition: Actions owned and next review/event route known; operation remains
+    continuous
+  next_route: P01
+  return_route: P07
+  source_ids:
+  - S01
+  - S06
+  - S07
+  - S17
+  - S18
+  - S19
+  - S20
+  - S30
+  - S32
+  - S33
+  permission_reference: Local delegation record required for execution; advisory drafting
+    may proceed within mandate
+  runbook: shared
+variants:
+  employee:
+  - id: E01
+    title: Map work and dependencies
+    stage_ids:
+    - P01
+    - P03
+    trigger: Programme intake, role/workflow change or repeated barrier
+    prerequisites:
+    - Available task observations and approved research access
+    activities:
+    - Map representative role activities and complete tasks across systems, communication,
+      content and environments
+    - Record frequency, interruptions, handoffs, interaction methods and cumulative
+      burden across a working day
+    - Include the UX design and branding systems governing employee tools, internal
+      communications and work activities
+    human_owner: Service/work-design owner with workers and research lead
+    ai_action: Structure authorised observations into task and dependency maps; propose
+      gaps to investigate
+    evidence_required:
+    - Task map with actual contexts and scope
+    - Participation record and unknown activities
+    - System-assurance plan and linked evidence/gaps for affected decisions
+    exit_condition: Affected workers and research/service owners have reviewed the
+      map or gaps remain explicit
+    next_route: E02
+    source_ids:
+    - S11
+    - S12
+    - S16
+    - S17
+    - S18
+    - S19
+    runbook: employee
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+  - id: E02
+    title: Route systemic barriers and confidential support
+    stage_ids:
+    - P03
+    - P09
+    trigger: Individual request, system failure or work-impact concern
+    prerequisites:
+    - Minimum necessary barrier description and actual receiving owners
+    activities:
+    - Route common service defects to the system/process owner
+    - Use the confidential adjustment/support route for individual needs; retain linkage
+      through restricted references and disclosure choice
+    human_owner: Service owner for defects; authorised support/HR owner for confidential
+      case within separate remits
+    ai_action: Prepare minimal handoffs within data permission; never determine adjustment
+      entitlement or employment outcomes
+    evidence_required:
+    - Systemic issue and separate restricted support reference if relevant
+    - Receiving owners and immediate access action
+    exit_condition: Both routes have owners where needed; no confidential detail is
+      exposed in the shared backlog
+    next_route: E03
+    source_ids:
+    - S11
+    - S19
+    - S20
+    runbook: employee
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+  - id: E03
+    title: Establish a qualified employee baseline
+    stage_ids:
+    - P02
+    - P03
+    - P07
+    trigger: Evidence needed for priority, supplier choice or outcome evaluation
+    prerequisites:
+    - Task scope, relevant requirements and approved evaluation methods
+    activities:
+    - Combine technical, manual/AT, comparative-task and human-experience evidence
+      without merging their meanings
+    - Record task settings, support dependence, sustainable effort, error/recovery
+      and cumulative effects; separate observation from inference
+    human_owner: Evaluation/research owner with affected workers and competent specialists
+    ai_action: Analyse approved evidence and flag missingness; do not rank workers,
+      infer competence or treat fastest completion as the goal
+    evidence_required:
+    - Baseline with methods, environments, dates and limitations
+    - Requirement and task-outcome records with source provenance
+    exit_condition: Evidence supports scoped prioritisation or the missing evidence
+      has an owner
+    next_route: E04
+    source_ids:
+    - S08
+    - S11
+    - S12
+    - S13
+    - S14
+    - S16
+    runbook: employee
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+  - id: E04
+    title: Fund systemic improvement and interim access
+    stage_ids:
+    - P04
+    - P05
+    trigger: Priorities, support options, procurement or renewal decisions
+    prerequisites:
+    - Qualified impact evidence, owner and proposed options
+    activities:
+    - Prioritise essential blocked work, significant harm, repeated burden and dependencies
+    - Agree practical interim access, supplier actions and permanent correction; consider
+      who bears extra effort and preserve privacy and choice
+    - Plan owned design-system and branding-system capability work with manual and
+      automatable QA coverage and employee usability outcomes
+    human_owner: Sponsor/service owner within delegation with procurement and confidential
+      support owner as appropriate
+    ai_action: Compare options, dependencies and consequences of deferral; keep funding
+      and authority proposals unconfirmed
+    evidence_required:
+    - Owned workstream and resource decisions
+    - Interim support quality and review conditions
+    - System-assurance plan and linked evidence/gaps for affected decisions
+    exit_condition: Approved work is feasible and owned; unfunded gaps and unresolved
+      harms remain visible
+    next_route: E05
+    source_ids:
+    - S01
+    - S02
+    - S06
+    - S07
+    - S11
+    - S12
+    - S17
+    - S18
+    - S32
+    - S33
+    runbook: employee
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+  - id: E05
+    title: Deliver, evaluate and transition
+    stage_ids:
+    - P05
+    - P06
+    - P07
+    - P08
+    trigger: Service, tool, workflow, content or supplier change
+    prerequisites:
+    - Bounded brief, source baseline, evidence plan and relevant permissions
+    activities:
+    - Use the shared delivery cycle for integrations, authentication, work tools,
+      learning and communications
+    - Evaluate realistic complete work activities and exact delivered assets; retain
+      failures and retest after correction
+    - Use the system-assurance plan for foundations/components, versioned reference
+      implementations and user ACT-style scripts; preserve internal brand purpose
+    human_owner: Delivery and evaluation owners; authorised service owner makes transition
+      decision
+    ai_action: Prepare reviewable assets, run supported checks and assemble evidence
+      within delegation
+    evidence_required:
+    - Versioned deliverables and actual evaluation results
+    - Authenticated transition decision and operational handoff
+    - System-assurance plan and linked evidence/gaps for affected decisions
+    exit_condition: Relevant P08 decision recorded with support, open issues, correction
+      and review conditions
+    next_route: E06
+    source_ids:
+    - S13
+    - S14
+    - S16
+    - S17
+    - S18
+    - S20
+    - S21
+    - S22
+    - S23
+    - S24
+    - S25
+    - S27
+    - S32
+    - S33
+    runbook: employee
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+  - id: E06
+    title: Sustain participation and learn
+    stage_ids:
+    - P09
+    trigger: Operation, feedback, role/tool change, redesign or absence/return
+    prerequisites:
+    - Operational owner and accessible confidential feedback routes
+    activities:
+    - Check whether support and correction deliver meaningful work participation over
+      time
+    - Review cumulative barriers after change; feed learning into procurement, design,
+      training and funded improvement
+    human_owner: Operational/workplace owner with programme and confidential support
+      owners
+    ai_action: Prompt agreed reviews and summarise permitted aggregates; no surveillance
+      or individual productivity scoring
+    evidence_required:
+    - Outcome review and owned corrective actions
+    - Restricted case details kept separate from shared programme reporting
+    exit_condition: Next actions and review triggers known; ongoing service remains
+      monitored within permission
+    next_route: E01
+    source_ids:
+    - S01
+    - S06
+    - S07
+    - S11
+    - S12
+    - S19
+    runbook: employee
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+  customer:
+  - id: C01
+    title: Map the complete customer journey
+    stage_ids:
+    - P01
+    - P03
+    trigger: New service, major change, complaint or journey gap
+    prerequisites:
+    - Service purpose, channels and available customer evidence
+    activities:
+    - Map discovery, understanding, choice, transaction/enrolment, use, support, change,
+      complaint and exit
+    - Record promises, decisions, intermediaries, recovery and handoffs across digital,
+      assisted and physical channels
+    - Identify the UX design and branding systems connecting communication promises,
+      components and the whole customer journey
+    human_owner: Service/CX owner with research and customer participants
+    ai_action: Draft journey maps from approved evidence and identify assumptions;
+      customer research validates them
+    evidence_required:
+    - End-to-end journey/dependency map
+    - Participation and unobserved contexts
+    - System-assurance plan and linked evidence/gaps for affected decisions
+    exit_condition: Scope covers relevant failure, support and exit paths; gaps remain
+      explicit
+    next_route: C02
+    source_ids:
+    - S04
+    - S05
+    - S17
+    - S18
+    - S19
+    runbook: customer
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+  - id: C02
+    title: Identify contexts and disabling demands
+    stage_ids:
+    - P02
+    - P03
+    trigger: Uncertain audience, complexity, urgency or changing capacity
+    prerequisites:
+    - Scoped journey and approved discovery methods
+    activities:
+    - Examine sensory, motor, cognitive, communication and intersecting needs plus
+      language, environment and time-varying capacity
+    - Consider complexity, emergency or emotionally consequential decisions, ageing
+      and service/product effects; commission appropriate expertise when needed
+    human_owner: Research/service owner with affected people and relevant specialists
+    ai_action: Generate hypotheses and evaluation questions without diagnosing, profiling
+      or inferring vulnerability from behaviour
+    evidence_required:
+    - Barrier/context hypotheses distinguished from observed evidence
+    - Requirements/applicability review for relevant service and jurisdiction
+    exit_condition: Risks and evidence gaps routed to owners without unsupported personal
+      labels
+    next_route: C03
+    source_ids:
+    - S08
+    - S09
+    - S10
+    - S16
+    - S19
+    - S20
+    runbook: customer
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+  - id: C03
+    title: Define equivalent outcomes and measures
+    stage_ids:
+    - P03
+    - P04
+    trigger: Baseline or outcome criteria needed
+    prerequisites:
+    - Journey scope, ethical research plan and decision purpose
+    activities:
+    - Define understanding, control, task success, effort, privacy, confidence and
+      satisfaction across channels
+    - If using functional-needs segmentation, including a scoped EAA lens, retrieve
+      owning guidance and approve data collection, sampling and interpretation
+    human_owner: Research/data owner with service, privacy and participant input
+    ai_action: Draft measure specifications and analyse authorised evidence; distinguish
+      sample limits and hypotheses
+    evidence_required:
+    - Outcome/evidence plan with baseline, coverage and missingness
+    - Data governance and participant influence record
+    exit_condition: Measures support a real decision and avoid compulsory diagnostic
+      labels or unsupported population claims
+    next_route: C04
+    source_ids:
+    - S09
+    - S16
+    - S17
+    - S19
+    - S30
+    runbook: customer
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+  - id: C04
+    title: Prioritise and design meaningful alternatives
+    stage_ids:
+    - P04
+    - P05
+    trigger: Funding, design, supplier or channel decisions
+    prerequisites:
+    - Qualified evidence, requirement routes and feasible options
+    activities:
+    - Prioritise serious exclusion and harm; compare policy, process, service, content
+      and interface interventions
+    - Examine marketing promises, support, retention, cancellation and complaint access;
+      assess assisted alternatives for choice, privacy, cost, delay and outcome
+    - Plan accessible UX and branding systems with traceable QA, preserving identification,
+      trust, expectations, value, values and resonance
+    human_owner: Sponsor/service owner with design, procurement and operations
+    ai_action: Compare alternatives and dependencies while leaving funding, legal
+      and material risk decisions to authorised humans
+    evidence_required:
+    - Owned roadmap and option appraisal
+    - Alternative-channel outcome and acceptance plan
+    - System-assurance plan and linked evidence/gaps for affected decisions
+    exit_condition: Affected work funded/owned with clear unresolved decisions; a
+      support channel is not assumed equivalent
+    next_route: C05
+    source_ids:
+    - S01
+    - S02
+    - S05
+    - S17
+    - S18
+    - S19
+    - S27
+    - S32
+    - S33
+    runbook: customer
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+  - id: C05
+    title: Deliver and evaluate complete journeys
+    stage_ids:
+    - P05
+    - P06
+    - P07
+    - P08
+    trigger: Implementation, production, service configuration or release
+    prerequisites:
+    - Brief, source baseline, exact assets/builds and permissions
+    activities:
+    - Integrate accessible content/media, operational staff, suppliers and interaction
+      channels from the brief
+    - Evaluate authentication, state changes, transactions, errors, handoffs, support
+      and exit in actual configurations; correct and retest
+    - Evaluate linked foundations, components, reference implementations and user
+      ACT-style scripts, plus brand outcomes beyond technical conformance
+    human_owner: Delivery/evaluation owners; authorised service/release owner decides
+    ai_action: Draft and review code/content, run supported authorised checks and
+      assemble evidence without substituting synthetic users
+    evidence_required:
+    - Actual technical, editorial and task/research findings with limits
+    - Release/transition decision and receiving operational owner
+    - System-assurance plan and linked evidence/gaps for affected decisions
+    exit_condition: P08 decision has adequate evidence and known open issues, support
+      and recovery arrangements
+    next_route: C06
+    source_ids:
+    - S13
+    - S14
+    - S16
+    - S17
+    - S18
+    - S21
+    - S22
+    - S23
+    - S24
+    - S25
+    - S26
+    - S27
+    - S28
+    - S29
+    - S31
+    - S32
+    - S33
+    runbook: customer
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+  - id: C06
+    title: Operate, recover and improve
+    stage_ids:
+    - P09
+    trigger: Live feedback, incident, complaint, source change or agreed review
+    prerequisites:
+    - Operational owner, usable support and permitted monitoring
+    activities:
+    - Combine complaints, support, research and observed failures; verify correction
+      in the delivered service
+    - Preserve subgroup disparities, recovery burdens and unresolved barriers; review
+      whether participation changed decisions
+    human_owner: Operational/service owner with programme, research and reporting
+      owners
+    ai_action: Analyse permitted aggregates and propose actions; do not infer disability
+      or causation from abandonment
+    evidence_required:
+    - Outcome review and claim-to-evidence report
+    - Owned corrections, source impact assessments and review triggers
+    exit_condition: Actions and next decisions owned; continuous operation loops to
+      affected earlier steps
+    next_route: C01
+    source_ids:
+    - S01
+    - S06
+    - S17
+    - S19
+    - S20
+    - S30
+    runbook: customer
+    permission_reference: Locally confirmed task mandate; execution must fit actual
+      tools and data access
+    return_route: affected P stage; see stage_ids
+routes:
+- id: R01
+  trigger: Urgent or serious exclusion
+  action: Activate the agreed immediate support/recovery route and preserve the defect
+  stage: P09
+  follow_up: P07
+- id: R02
+  trigger: Missing authority, scope or permission
+  action: Block the affected action; request the missing decision and continue independent
+    work
+  stage: P01
+  follow_up: P02
+- id: R03
+  trigger: Purchased service, procurement or renewal
+  action: Evaluate the actual configured tasks and supplier evidence; record contractual
+    dependencies
+  stage: P05
+  follow_up: P07
+- id: R04
+  trigger: Confidential individual support or employment impact
+  action: Separate restricted support/fair-review records from systemic service correction
+  stage: P03
+  follow_up: P09
+- id: R05
+  trigger: Failed, missing, uncertain or errored assessment evidence
+  action: Keep the result; investigate, correct and retest before affected claims
+  stage: P07
+  follow_up: P06
+- id: R06
+  trigger: Material source, law, policy, supplier, model, component or audience change
+  action: Perform source/context impact assessment and reopen affected decisions
+  stage: P02
+  follow_up: P07
+- id: R07
+  trigger: Contradictory or unavailable source
+  action: Classify authority, record limits and route uncertainty; do not invent a
+    replacement
+  stage: P02
+  follow_up: P01
+- id: R08
+  trigger: Sensitive data, telemetry, AT return path or AI integration
+  action: Review actual flows and approved purposes using S19–S20 before affected
+    processing
+  stage: P05
+  follow_up: P03
+- id: R09
+  trigger: Aggregate improvement masks disparity or harmful outcome
+  action: Preserve subgroup evidence and investigate without inferring diagnosis
+  stage: P09
+  follow_up: P03
+- id: R10
+  trigger: Unsubstantiated claim or decision beyond delegation
+  action: Prepare a qualified draft; route to authorised human and retain negative
+    evidence
+  stage: P08
+  follow_up: P07
+- id: R11
+  trigger: Alternative channel, assistance or handoff
+  action: Evaluate information, control, privacy, availability, effort and outcome
+    across the whole journey
+  stage: P05
+  follow_up: P07
+- id: R12
+  trigger: Document, email, media or specialist interaction
+  action: Select source modules from the brief and preserve exact production handoffs
+  stage: P05
+  follow_up: P06
+- id: R13
+  trigger: Synthetic evidence or generated approval presented as real
+  action: Exclude it from real claims and recover provenance; seek actual evidence/decision
+  stage: P07
+  follow_up: P08
+- id: R14
+  trigger: AI errors or review burden undermine benefit
+  action: Reduce or suspend affected delegation and review the tool/process with its
+    owner
+  stage: P09
+  follow_up: P04
+- id: R15
+  trigger: Missing or changed UX design/branding system coverage, or a gap between
+    system, QA and actual consumer
+  action: Assign system capability/assurance work; trace foundations, components,
+    brand purposes, tests and affected decisions without inferring a pass
+  stage: P04
+  follow_up: P07
+record_contracts:
+  stage_task:
+  - id
+  - runbook
+  - stage_id
+  - trigger
+  - scope
+  - prerequisites
+  - source_ids
+  - human_owner
+  - ai_action
+  - permission_reference
+  - evidence_required
+  - exit_condition
+  - next_route
+  source_use:
+  - id
+  - source_id
+  - repository
+  - path
+  - section_or_id
+  - resolved_commit_sha
+  - retrieved_at
+  - authority_type
+  - source_review_status
+  - limitations
+  - used_by
+  evidence:
+  - id
+  - requirement_or_outcome_id
+  - method
+  - actual_result
+  - environment
+  - date
+  - coverage
+  - limitations
+  - evidence_location
+  - collector
+  - review_status
+  - synthetic
+  decision:
+  - id
+  - scope
+  - options
+  - evidence_ids
+  - source_use_ids
+  - decision_owner
+  - decision
+  - authenticated_approval_reference
+  - conditions
+  - receiving_owner
+  - review_trigger
+  - synthetic
+  exception:
+  - id
+  - barrier
+  - affected_people_and_tasks
+  - impact
+  - interim_access
+  - owner
+  - authority
+  - corrective_action
+  - expiry_or_review
+  - retest_needed
+  delegation:
+  - id
+  - purpose
+  - human_owner
+  - level
+  - permitted_actions
+  - targets
+  - data_access
+  - environment
+  - delegation_reference
+  - limits
+  - verification
+  - stop_conditions
+  - recovery
+  source_change:
+  - id
+  - source_id
+  - old_baseline
+  - new_candidate
+  - changed_meaning
+  - affected_records
+  - impact
+  - evidence_needed
+  - owner
+  - disposition
+  - approval_reference
+  - review_trigger
+  foundation_coverage: &id001
+  - id
+  - revision
+  - scope
+  - outcome
+  - guidance_refs
+  - manual_test_refs
+  - automation_class
+  - automation_test_refs
+  - automation_limits
+  - dependencies
+  - human_owner
+  - evidence_refs
+  - readiness
+  - gap_plan
+  component_coverage: &id002
+  - id
+  - revision
+  - scope
+  - design_requirement_refs
+  - technical_technique_refs
+  - methodology_refs
+  - reference_implementation_refs
+  - manual_test_refs
+  - automation_assessment_ref
+  - user_act_script_refs
+  - consumer_refs
+  - human_owner
+  - evidence_refs
+  - readiness
+  - gap_plan
+real_record_rules:
+  synthetic_evidence: excluded from actual claims
+  approved_decision: requires actual authenticated approval; checker only checks presence
+  not_applicable: requires scope reason
+  source_revision: repository commit SHA, not blob SHA
+  pass: does not supersede failed or missing evidence elsewhere
+system_requirements:
+  owner_document: framework/design-and-brand-systems.md
+  template: templates/system-assurance-plan.md
+  scope:
+  - employee
+  - customer
+  required_capabilities:
+  - accessible_ux_design_system
+  - accessible_branding_system
+  adoption_options:
+  - adopt
+  - create
+  - remediate
+  - extend
+  foundation_fields: *id001
+  automation_classes:
+  - direct
+  - partial
+  - manual_primary
+  component_fields: *id002
+  brand_purposes:
+  - id: B01
+    purpose: Help everyone identify organisations, products and services
+  - id: B02
+    purpose: Build trust with everyone
+  - id: B03
+    purpose: Set everybody's expectations
+  - id: B04
+    purpose: Create value for everyone
+  - id: B05
+    purpose: Reinforce values in everyone's minds
+  - id: B06
+    purpose: Resonate with every customer
+  brand_preservation:
+  - purpose
+  - recognisability
+  - distinctiveness
+  - positioning
+  - values
+  source_ids:
+  - S13
+  - S14
+  - S16
+  - S17
+  - S18
+  - S19
+  - S32
+  - S33
+  coverage_rules:
+  - Every in-scope foundation needs guidance and manual coverage plus meaningful automatable
+    checks or a reasoned manual-primary classification
+  - Every in-scope pattern/component needs linked design requirements, techniques,
+    methodologies, reference implementations and user ACT-style scripts; missing assets
+    have owned gap plans
+  - Keep applicable conformance, accessible usability and brand communication outcomes
+    distinct
+  - Reference implementations and reused components support only their evaluated scope;
+    verify configured use and complete journeys
+  - Detailed assets remain in owning systems; preserve IDs, revisions, provenance
+    and reverse consumer dependencies

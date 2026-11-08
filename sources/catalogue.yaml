@@ -1,0 +1,872 @@
+schema_version: '1.0'
+status: draft_reference_catalogue
+verification_scope: 33 entry-point files retrieved at resolved commits; routing review
+  only, not a downstream or legal audit
+sources:
+- id: S01
+  title: Programme coordination
+  repository: Double-FW/Inclusion-and-Accessibility-Policy
+  path: Programme_Operating_and_Reporting_Map.md
+  purpose: Shared programme loop; use as the initial coordination route.
+  default_branch: main
+  resolved_commit_sha: 5cfd16d944d03ad659481c861070967cc51ab07b
+  blob_sha: 0ad4d680c6d6a6d07ad2470f7cbbaa6e183b64fb
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Inclusion-and-Accessibility-Policy/blob/main/Programme_Operating_and_Reporting_Map.md
+  resolved_url: https://github.com/Double-FW/Inclusion-and-Accessibility-Policy/blob/5cfd16d944d03ad659481c861070967cc51ab07b/Programme_Operating_and_Reporting_Map.md
+  used_by:
+  - P01
+  - P04
+  - P08
+  - P09
+  - E04
+  - E06
+  - C04
+  - C06
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S02
+  title: Policy and accountability
+  repository: Double-FW/Inclusion-and-Accessibility-Policy
+  path: Accessibility_and_Inclusion_Policy_RACI_and_Steering_Group_Guide.md
+  purpose: Human and AI responsibilities; retrieve alongside the policy creation guide.
+  default_branch: main
+  resolved_commit_sha: 5cfd16d944d03ad659481c861070967cc51ab07b
+  blob_sha: b762c54cae25dbebe514d8bcb9324eb1079ba93f
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Inclusion-and-Accessibility-Policy/blob/main/Accessibility_and_Inclusion_Policy_RACI_and_Steering_Group_Guide.md
+  resolved_url: https://github.com/Double-FW/Inclusion-and-Accessibility-Policy/blob/5cfd16d944d03ad659481c861070967cc51ab07b/Accessibility_and_Inclusion_Policy_RACI_and_Steering_Group_Guide.md
+  used_by:
+  - P01
+  - P02
+  - P08
+  - E04
+  - C04
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S03
+  title: Executive commitments
+  repository: Double-FW/Executive-and-Organisational-Commitments
+  path: README.md
+  purpose: Translate locally adopted commitments into owned delivery and evidence.
+  default_branch: main
+  resolved_commit_sha: 3da3acfebb39f5802e12bf4de42cc13c40fe9b31
+  blob_sha: aaeeffef81b08fee08d46e0d15ecb93e4c2f94a8
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Executive-and-Organisational-Commitments/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/Executive-and-Organisational-Commitments/blob/3da3acfebb39f5802e12bf4de42cc13c40fe9b31/README.md
+  used_by:
+  - P01
+  - P02
+  - P04
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S04
+  title: Strategic reasoning
+  repository: Double-FW/The-Little-Book-of-Accessibility
+  path: Little_Book_Organisational_Agent_and_Workflow_Governance_Map.md
+  purpose: Route strategic, design and management questions to the relevant knowledge.
+  default_branch: main
+  resolved_commit_sha: 005fb504ed9ae8d5e7989ff939362738fb192d8f
+  blob_sha: 1a4f7de56b6e73605c658826731b670abf4e1bc6
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/The-Little-Book-of-Accessibility/blob/main/Little_Book_Organisational_Agent_and_Workflow_Governance_Map.md
+  resolved_url: https://github.com/Double-FW/The-Little-Book-of-Accessibility/blob/005fb504ed9ae8d5e7989ff939362738fb192d8f/Little_Book_Organisational_Agent_and_Workflow_Governance_Map.md
+  used_by:
+  - P01
+  - P03
+  - P04
+  - C01
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S05
+  title: Operating model
+  repository: Double-FW/Synchronistic-Design-Formal-Operating-Model
+  path: Synchronistic_Design_Formal_Operating_Model_v0.1.md
+  purpose: Connect organisational intent, human context, delivery, evidence and decisions.
+  default_branch: main
+  resolved_commit_sha: 7e4dbc16eb4f4807ddf25d0b421c4d365e252780
+  blob_sha: d5dec940a0e2c9f6f7cba719d8a5bdc7a4295063
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Synchronistic-Design-Formal-Operating-Model/blob/main/Synchronistic_Design_Formal_Operating_Model_v0.1.md
+  resolved_url: https://github.com/Double-FW/Synchronistic-Design-Formal-Operating-Model/blob/7e4dbc16eb4f4807ddf25d0b421c4d365e252780/Synchronistic_Design_Formal_Operating_Model_v0.1.md
+  used_by:
+  - P01
+  - P04
+  - P05
+  - C01
+  - C04
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S06
+  title: Capability and AI readiness
+  repository: Double-FW/AI-Accessibility-Maturity-Model
+  path: README.md
+  purpose: Assess evidence of capability; choose a proportionate adoption path.
+  default_branch: main
+  resolved_commit_sha: 909cc7cf32bc4573f0844d054d5d4a37e5dda496
+  blob_sha: 3357d3ba76480334cd26ebfb3bdda141273156c4
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/AI-Accessibility-Maturity-Model/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/AI-Accessibility-Maturity-Model/blob/909cc7cf32bc4573f0844d054d5d4a37e5dda496/README.md
+  used_by:
+  - P03
+  - P04
+  - P09
+  - E04
+  - E06
+  - C06
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S07
+  title: Champions and learning
+  repository: Double-FW/Accessibility-Champions
+  path: Programme_Operating_and_Reporting_Map.md
+  purpose: Support local capability, learning and escalation with protected capacity.
+  default_branch: main
+  resolved_commit_sha: 512faf483d1e32a1aeb09dbdd656bbffcc8e5d7b
+  blob_sha: 0ad4d680c6d6a6d07ad2470f7cbbaa6e183b64fb
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Accessibility-Champions/blob/main/Programme_Operating_and_Reporting_Map.md
+  resolved_url: https://github.com/Double-FW/Accessibility-Champions/blob/512faf483d1e32a1aeb09dbdd656bbffcc8e5d7b/Programme_Operating_and_Reporting_Map.md
+  used_by:
+  - P04
+  - P09
+  - E04
+  - E06
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S08
+  title: Regulatory routing
+  repository: Double-FW/Global_Accessiblity_Regulatory_Requirements
+  path: Double_FW_Repositories_Regulatory_Delivery_and_Agent_Design.md
+  purpose: Find jurisdictional and delivery routes; verify applicable primary authority
+    separately.
+  default_branch: main
+  resolved_commit_sha: 9af172a52f867e0c67586e7b0e8a387a4a14a813
+  blob_sha: 6e47fcb3748c86968f2507dc81cef2649cf8f6bf
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: regulatory_guidance_not_primary_law
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Global_Accessiblity_Regulatory_Requirements/blob/main/Double_FW_Repositories_Regulatory_Delivery_and_Agent_Design.md
+  resolved_url: https://github.com/Double-FW/Global_Accessiblity_Regulatory_Requirements/blob/9af172a52f867e0c67586e7b0e8a387a4a14a813/Double_FW_Repositories_Regulatory_Delivery_and_Agent_Design.md
+  used_by:
+  - P02
+  - P08
+  - E03
+  - C02
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S09
+  title: EAA applicability and delivery
+  repository: Double-FW/European-Accessibility-Act-EAA-Compliance-Approach
+  path: README.md
+  purpose: Route scoped EAA work to guides, source controls, workflows and evidence
+    records.
+  default_branch: main
+  resolved_commit_sha: 20ad64586ac8820067903e6386499c62dd0bbc60
+  blob_sha: 1a0ccf96c85bd3bc78eb8c9b7b0bb7dc8765e6cb
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: regulatory_guidance_not_primary_law
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/European-Accessibility-Act-EAA-Compliance-Approach/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/European-Accessibility-Act-EAA-Compliance-Approach/blob/20ad64586ac8820067903e6386499c62dd0bbc60/README.md
+  used_by:
+  - P02
+  - P08
+  - C02
+  - C03
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S10
+  title: Public-sector web/app routing
+  repository: Double-FW/EU-Web-Accessibility-Directive_EN301549
+  path: WAD_Requirements_to_Double_FW_Approaches_Mapping.md
+  purpose: Connect scoped WAD/EN work to source guidance and delivery methods.
+  default_branch: main
+  resolved_commit_sha: 09e902440f048556e73a81666c59dd11d95f015e
+  blob_sha: 294556243914c02ee3aaede906a29e1eac9be411
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: regulatory_guidance_not_primary_law
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/EU-Web-Accessibility-Directive_EN301549/blob/main/WAD_Requirements_to_Double_FW_Approaches_Mapping.md
+  resolved_url: https://github.com/Double-FW/EU-Web-Accessibility-Directive_EN301549/blob/09e902440f048556e73a81666c59dd11d95f015e/WAD_Requirements_to_Double_FW_Approaches_Mapping.md
+  used_by:
+  - P02
+  - P08
+  - C02
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S11
+  title: Employment lifecycle
+  repository: Double-FW/Inclusion-for-Managers-and-HR-Systems
+  path: README.md
+  purpose: Recruitment through progression and employment processes; systems, adjustments
+    and evaluation.
+  default_branch: main
+  resolved_commit_sha: c1157ec0bf3510b8168c057541132260d78fc745
+  blob_sha: 455010f2e01d1f92addc698257875d76e27f1472
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Inclusion-for-Managers-and-HR-Systems/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/Inclusion-for-Managers-and-HR-Systems/blob/c1157ec0bf3510b8168c057541132260d78fc745/README.md
+  used_by:
+  - P03
+  - P05
+  - P08
+  - E01
+  - E02
+  - E03
+  - E04
+  - E06
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S12
+  title: Employee task evaluation
+  repository: Double-FW/Task-Analysis-for-Comparative-Accessibility-Evaluation-of-Internal-Systems
+  path: TA Methodology.md
+  purpose: Compare complete tasks and cumulative barriers across internal workflows.
+  default_branch: main
+  resolved_commit_sha: 3f8c4cb22a87546cba80f382322be03ebb4517ca
+  blob_sha: 1d9ffd7e60eca40b594a622de9679ca8e7bc296d
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Task-Analysis-for-Comparative-Accessibility-Evaluation-of-Internal-Systems/blob/main/TA%20Methodology.md
+  resolved_url: https://github.com/Double-FW/Task-Analysis-for-Comparative-Accessibility-Evaluation-of-Internal-Systems/blob/3f8c4cb22a87546cba80f382322be03ebb4517ca/TA%20Methodology.md
+  used_by:
+  - P03
+  - P05
+  - P07
+  - P08
+  - E01
+  - E03
+  - E04
+  - E06
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S13
+  title: QA governance
+  repository: Double-FW/QA_Accessibility_Testing
+  path: Accessibility_Test_Led_Delivery_Framework.md
+  purpose: Plan layered assessment, evidence, remediation and review.
+  default_branch: main
+  resolved_commit_sha: e4bb7a4641b81aed55b09e4a781b02fa659c97eb
+  blob_sha: d3743f13b0f594f0279547bd0073ed6969587846
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/QA_Accessibility_Testing/blob/main/Accessibility_Test_Led_Delivery_Framework.md
+  resolved_url: https://github.com/Double-FW/QA_Accessibility_Testing/blob/e4bb7a4641b81aed55b09e4a781b02fa659c97eb/Accessibility_Test_Led_Delivery_Framework.md
+  used_by:
+  - P05
+  - P06
+  - P07
+  - P08
+  - E03
+  - E05
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S14
+  title: Canonical test selection
+  repository: Double-FW/QA_Accessibility_Testing
+  path: Canonical Test Library.md
+  purpose: Retrieve current tests and their owning relationship register; do not copy
+    procedures.
+  default_branch: main
+  resolved_commit_sha: e4bb7a4641b81aed55b09e4a781b02fa659c97eb
+  blob_sha: 3602b4a6d1097b73f3583cc616995db84ccdde07
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/QA_Accessibility_Testing/blob/main/Canonical%20Test%20Library.md
+  resolved_url: https://github.com/Double-FW/QA_Accessibility_Testing/blob/e4bb7a4641b81aed55b09e4a781b02fa659c97eb/Canonical%20Test%20Library.md
+  used_by:
+  - P05
+  - P06
+  - P07
+  - P08
+  - E03
+  - E05
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S15
+  title: QA adoption
+  repository: Double-FW/Phased-Approach-to-integrating-Accessibility-into-QA
+  path: README.md
+  purpose: A bounded starting point for QA integration; not the whole assurance programme.
+  default_branch: main
+  resolved_commit_sha: 1fa3ed40785294ebe5aedb6e7adca45ac20f1bd6
+  blob_sha: 1bc98768db86045fcdced99c4a1b7ff735548082
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Phased-Approach-to-integrating-Accessibility-into-QA/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/Phased-Approach-to-integrating-Accessibility-into-QA/blob/1fa3ed40785294ebe5aedb6e7adca45ac20f1bd6/README.md
+  used_by:
+  - P07
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S16
+  title: Cognitive design
+  repository: Double-FW/Cognitive-UX-Design
+  path: Cognitive_UX_Coverage_and_Delivery_Map.md
+  purpose: Route memory, comprehension, interruption and recovery questions to owning
+    guidance.
+  default_branch: main
+  resolved_commit_sha: f960ccbbbdedb4f9299e982d8064aba005237527
+  blob_sha: 2b3743cab4fd77a5443d9bd897fb84278458ceb9
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Cognitive-UX-Design/blob/main/Cognitive_UX_Coverage_and_Delivery_Map.md
+  resolved_url: https://github.com/Double-FW/Cognitive-UX-Design/blob/f960ccbbbdedb4f9299e982d8064aba005237527/Cognitive_UX_Coverage_and_Delivery_Map.md
+  used_by:
+  - P05
+  - P06
+  - P07
+  - E01
+  - E03
+  - E05
+  - C02
+  - C03
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S17
+  title: Brand and customer experience
+  repository: Double-FW/POUR-for-Branding-Systems-and-CX
+  path: The WCAG POUR principles reframed through emotional outcomes for branding
+    systems.md
+  purpose: Connect brand promises to emotional and functional experience; not new
+    normative WCAG rules.
+  default_branch: main
+  resolved_commit_sha: 41be9677dc9bdd589cc2967a603dd7024b758eae
+  blob_sha: 79181b0748799d134ef1aed79f2ff97c828d6a39
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/POUR-for-Branding-Systems-and-CX/blob/main/The%20WCAG%20POUR%20principles%20reframed%20through%20emotional%20outcomes%20for%20branding%20systems.md
+  resolved_url: https://github.com/Double-FW/POUR-for-Branding-Systems-and-CX/blob/41be9677dc9bdd589cc2967a603dd7024b758eae/The%20WCAG%20POUR%20principles%20reframed%20through%20emotional%20outcomes%20for%20branding%20systems.md
+  used_by:
+  - P03
+  - P04
+  - P05
+  - P06
+  - P07
+  - P08
+  - P09
+  - E01
+  - E04
+  - E05
+  - C01
+  - C03
+  - C04
+  - C05
+  - C06
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S18
+  title: Typography
+  repository: Double-FW/Accessible-Typography-for-UX-and-Brand-Systems
+  path: README.md
+  purpose: Contextual typography, language, script and readability decisions.
+  default_branch: main
+  resolved_commit_sha: 2e6bb5b81dc09642bfa4aa04ed1512133d9e72bd
+  blob_sha: ff5c53b08212196115ee91296eb26cad8929bc3b
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Accessible-Typography-for-UX-and-Brand-Systems/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/Accessible-Typography-for-UX-and-Brand-Systems/blob/2e6bb5b81dc09642bfa4aa04ed1512133d9e72bd/README.md
+  used_by:
+  - P03
+  - P04
+  - P05
+  - P06
+  - P07
+  - P09
+  - E01
+  - E04
+  - E05
+  - C01
+  - C04
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S19
+  title: Data and participation
+  repository: Double-FW/Data_Ethics_and_Disability
+  path: README.md
+  purpose: Ethical data use, inclusive research and participation.
+  default_branch: main
+  resolved_commit_sha: 5f388c831753b68100855c0e6c05d56082a0c66e
+  blob_sha: 12cad2c1ad6a3903ff14047af325df19343c6b94
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Data_Ethics_and_Disability/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/Data_Ethics_and_Disability/blob/5f388c831753b68100855c0e6c05d56082a0c66e/README.md
+  used_by:
+  - P03
+  - P05
+  - P06
+  - P07
+  - P09
+  - E01
+  - E02
+  - E06
+  - C01
+  - C02
+  - C03
+  - C04
+  - C06
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S20
+  title: Assistive technology and AI data flows
+  repository: Double-FW/Data_Ethics_and_Disability
+  path: Assistive_Technology_Data_Flows_Risks_and_Review.md
+  purpose: Review collection, return paths, supplier use and sensitive information
+    exposure.
+  default_branch: main
+  resolved_commit_sha: 5f388c831753b68100855c0e6c05d56082a0c66e
+  blob_sha: ad709c9bfb8a97e2dd0ac0f0e1500680734513e0
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Data_Ethics_and_Disability/blob/main/Assistive_Technology_Data_Flows_Risks_and_Review.md
+  resolved_url: https://github.com/Double-FW/Data_Ethics_and_Disability/blob/5f388c831753b68100855c0e6c05d56082a0c66e/Assistive_Technology_Data_Flows_Risks_and_Review.md
+  used_by:
+  - P05
+  - P06
+  - P09
+  - E02
+  - E05
+  - C02
+  - C06
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S21
+  title: Documents and reports
+  repository: Double-FW/Accessible_Digital_and_Printed_Documents
+  path: Production_Workflow_and_Handoff_Map.md
+  purpose: Plan document creation, handoffs, accessible outputs and verification.
+  default_branch: main
+  resolved_commit_sha: ad90af4e33cff7a80bdb4d30a8cb2e6c981e8e46
+  blob_sha: 58c68c941ea8bddc04ecd918d7dc97041845be5d
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Accessible_Digital_and_Printed_Documents/blob/main/Production_Workflow_and_Handoff_Map.md
+  resolved_url: https://github.com/Double-FW/Accessible_Digital_and_Printed_Documents/blob/ad90af4e33cff7a80bdb4d30a8cb2e6c981e8e46/Production_Workflow_and_Handoff_Map.md
+  used_by:
+  - P06
+  - P07
+  - E05
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S22
+  title: Email
+  repository: Double-FW/Accessible-Email-Design
+  path: Production_Workflow_and_Handoff_Map.md
+  purpose: Plan communications production and delivery handoffs.
+  default_branch: main
+  resolved_commit_sha: 769f25a6719b5a4d70bfbae8b4e553ed40433b8a
+  blob_sha: 58c68c941ea8bddc04ecd918d7dc97041845be5d
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Accessible-Email-Design/blob/main/Production_Workflow_and_Handoff_Map.md
+  resolved_url: https://github.com/Double-FW/Accessible-Email-Design/blob/769f25a6719b5a4d70bfbae8b4e553ed40433b8a/Production_Workflow_and_Handoff_Map.md
+  used_by:
+  - P06
+  - P07
+  - E05
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S23
+  title: Video production
+  repository: Double-FW/Accessible-Film-TV-and-Video-Content-Production-Management
+  path: Production_Workflow_and_Handoff_Map.md
+  purpose: Integrate accessibility at commissioning, scripting, production and delivery.
+  default_branch: main
+  resolved_commit_sha: 530d21d45138d65174bb022ded1c74217f98dba6
+  blob_sha: 58c68c941ea8bddc04ecd918d7dc97041845be5d
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Accessible-Film-TV-and-Video-Content-Production-Management/blob/main/Production_Workflow_and_Handoff_Map.md
+  resolved_url: https://github.com/Double-FW/Accessible-Film-TV-and-Video-Content-Production-Management/blob/530d21d45138d65174bb022ded1c74217f98dba6/Production_Workflow_and_Handoff_Map.md
+  used_by:
+  - P06
+  - P07
+  - E05
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S24
+  title: Captions
+  repository: Double-FW/Closed-Caption-Subtitles
+  path: Production_Workflow_and_Handoff_Map.md
+  purpose: Route caption creation, editorial review and asset handoffs.
+  default_branch: main
+  resolved_commit_sha: bf267b1b4f18bb196442dcb7ed24ae354c87bf65
+  blob_sha: 58c68c941ea8bddc04ecd918d7dc97041845be5d
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Closed-Caption-Subtitles/blob/main/Production_Workflow_and_Handoff_Map.md
+  resolved_url: https://github.com/Double-FW/Closed-Caption-Subtitles/blob/bf267b1b4f18bb196442dcb7ed24ae354c87bf65/Production_Workflow_and_Handoff_Map.md
+  used_by:
+  - P06
+  - P07
+  - E05
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S25
+  title: Audio description
+  repository: Double-FW/Audio-Descriptions
+  path: Production_Workflow_and_Handoff_Map.md
+  purpose: Route description planning, production and editorial judgement.
+  default_branch: main
+  resolved_commit_sha: 3c28d530882a44a076c53e1fa9cc66230561f6b7
+  blob_sha: 58c68c941ea8bddc04ecd918d7dc97041845be5d
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Audio-Descriptions/blob/main/Production_Workflow_and_Handoff_Map.md
+  resolved_url: https://github.com/Double-FW/Audio-Descriptions/blob/3c28d530882a44a076c53e1fa9cc66230561f6b7/Production_Workflow_and_Handoff_Map.md
+  used_by:
+  - P06
+  - P07
+  - E05
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S26
+  title: Charts, graphs and maps
+  repository: Double-FW/Accessible_Charts_Graphs_and_Maps
+  path: README.md
+  purpose: Select appropriate accessible data and spatial communication routes.
+  default_branch: main
+  resolved_commit_sha: 5b621d49e65c8ae58f3409fbfc484b8728c7d701
+  blob_sha: 4a9774489bc0ae0626810de4c9ad501ac07f4fc1
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Accessible_Charts_Graphs_and_Maps/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/Accessible_Charts_Graphs_and_Maps/blob/5b621d49e65c8ae58f3409fbfc484b8728c7d701/README.md
+  used_by:
+  - P06
+  - P07
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S27
+  title: Conversational services
+  repository: Double-FW/Accessible-Chatbots
+  path: README.md
+  purpose: Design, delivery, testing, uncertainty and human handoff.
+  default_branch: main
+  resolved_commit_sha: a1576b20e2519af0f79143f2984c242be2659701
+  blob_sha: 5f137d6e74fa0524adb59f12c4345c77d061596c
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Accessible-Chatbots/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/Accessible-Chatbots/blob/a1576b20e2519af0f79143f2984c242be2659701/README.md
+  used_by:
+  - P05
+  - P06
+  - P07
+  - E05
+  - C04
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S28
+  title: Immersive services
+  repository: Double-FW/VR_XR_and_AR_Accessibility
+  path: README.md
+  purpose: Conditional module for immersive, physical and ergonomic contexts.
+  default_branch: main
+  resolved_commit_sha: 76bee1270ba31dd312455c6478b2af6f00674c77
+  blob_sha: 15efc2c8fc92fde0f9e280b8d0bd8d4bb6fb38c1
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/VR_XR_and_AR_Accessibility/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/VR_XR_and_AR_Accessibility/blob/76bee1270ba31dd312455c6478b2af6f00674c77/README.md
+  used_by:
+  - P05
+  - P06
+  - P07
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S29
+  title: Games
+  repository: Double-FW/Inclusive-Games-Design
+  path: README.md
+  purpose: Conditional module where game interaction or engagement is part of the
+    service.
+  default_branch: main
+  resolved_commit_sha: c84f01116ab8f394e3f40dc9bf646b834d521b5e
+  blob_sha: b39467f5eab37e63c3574e5c3a52d2672f6b39d7
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Inclusive-Games-Design/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/Inclusive-Games-Design/blob/c84f01116ab8f394e3f40dc9bf646b834d521b5e/README.md
+  used_by:
+  - P05
+  - P06
+  - P07
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S30
+  title: ESG and leadership reporting
+  repository: Double-FW/Mapping-Accessibility-Maturity-to-an-ESG-Model-
+  path: ESG_Inclusion_Strategy_and_Business_Intelligence_Playbook.md
+  purpose: Connect inclusion evidence to strategic opportunity and substantiated reporting.
+  default_branch: main
+  resolved_commit_sha: 030b0ed7f20db34333754b3c35c122b4235c2386
+  blob_sha: 878a059e2b6bf6db3ee37cccf0c0b9137d2190fe
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Mapping-Accessibility-Maturity-to-an-ESG-Model-/blob/main/ESG_Inclusion_Strategy_and_Business_Intelligence_Playbook.md
+  resolved_url: https://github.com/Double-FW/Mapping-Accessibility-Maturity-to-an-ESG-Model-/blob/030b0ed7f20db34333754b3c35c122b4235c2386/ESG_Inclusion_Strategy_and_Business_Intelligence_Playbook.md
+  used_by:
+  - P04
+  - P09
+  - C03
+  - C06
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S31
+  title: Representation in productions
+  repository: Double-FW/Creative-Disability-Casting-for-Film-and-TV-Drama
+  path: README.md
+  purpose: Conditional route for casting and portrayal in commissioned dramatic content.
+  default_branch: main
+  resolved_commit_sha: 70b8a664a0c35e6f411cae305d7ef02237379460
+  blob_sha: 23c43a492c58ab83d1595edb9d11b41485b3b7f4
+  retrieved_at: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  limitations: Entry point and routing reviewed; no independent audit of all downstream
+    guidance or external citations.
+  discovery_url: https://github.com/Double-FW/Creative-Disability-Casting-for-Film-and-TV-Drama/blob/main/README.md
+  resolved_url: https://github.com/Double-FW/Creative-Disability-Casting-for-Film-and-TV-Drama/blob/70b8a664a0c35e6f411cae305d7ef02237379460/README.md
+  used_by:
+  - P06
+  - C05
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  last_verified: '2026-11-08'
+- id: S32
+  title: ACT-style practice and pattern evaluation
+  path: Accessibility_ACT-Style_Test_System.md
+  purpose: Select practice, pattern and user-task evaluation routes; retain source
+    limits and distinguish local ACT-style scripts from formal conformance claims.
+  limitations: ACT-style source, not proof of approved formal ACT-rule status or comprehensive
+    usability coverage.
+  repository: Double-FW/QA_Accessibility_Testing
+  default_branch: main
+  resolved_commit_sha: e4bb7a4641b81aed55b09e4a781b02fa659c97eb
+  blob_sha: 42214b2851fc7ef5fb5c43f887a904f57c249c13
+  retrieved_at: '2026-11-08'
+  last_verified: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  discovery_url: https://github.com/Double-FW/QA_Accessibility_Testing/blob/main/Accessibility_ACT-Style_Test_System.md
+  resolved_url: https://github.com/Double-FW/QA_Accessibility_Testing/blob/e4bb7a4641b81aed55b09e4a781b02fa659c97eb/Accessibility_ACT-Style_Test_System.md
+  used_by:
+  - P03
+  - P04
+  - P05
+  - P06
+  - P07
+  - P08
+  - P09
+  - E04
+  - E05
+  - C04
+  - C05
+- id: S33
+  title: Candidate token, component and automation dependencies
+  path: AXE → Design Tokens → Components.md
+  purpose: Inform bidirectional mapping from foundations/tokens to components and
+    checks; validate every dependency in the local implementation.
+  limitations: Hypothesis/reference mapping only; statements about tokens and automation
+    must be checked against actual semantics, content, rendering and behaviour.
+  repository: Double-FW/QA_Accessibility_Testing
+  default_branch: main
+  resolved_commit_sha: e4bb7a4641b81aed55b09e4a781b02fa659c97eb
+  blob_sha: 3524d49fb6288d50eba5fb444effea956bb633ca
+  retrieved_at: '2026-11-08'
+  last_verified: '2026-11-08'
+  access_status: retrieved
+  review_status: routing_review_only
+  authority_type: advisory_guidance
+  owner: External repository maintainer; no named maintainer verified by this package
+  local_adoption_status: not_adopted
+  discovery_url: https://github.com/Double-FW/QA_Accessibility_Testing/blob/main/AXE%20%E2%86%92%20Design%20Tokens%20%E2%86%92%20Components.md
+  resolved_url: https://github.com/Double-FW/QA_Accessibility_Testing/blob/e4bb7a4641b81aed55b09e4a781b02fa659c97eb/AXE%20%E2%86%92%20Design%20Tokens%20%E2%86%92%20Components.md
+  used_by:
+  - P03
+  - P05
+  - P06
+  - P07
+  - P09
+  - E04
+  - E05
+  - C04
+  - C05
