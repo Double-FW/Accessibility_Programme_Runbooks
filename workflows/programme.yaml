@@ -151,13 +151,14 @@ stages:
   activities:
   - Compare interventions across policy, process, services, technology and capability
   - Agree outcomes, dependencies, resources, measures and accountable owners
+  - When scope, budget or timing changes, assess effects on affected people and tasks; compare alternatives and record preserved, deferred or changed outcomes, owners and recovery routes
   - Plan and resource adoption, creation or remediation of accessible UX and branding
     systems, with traceable QA and usable brand outcomes
   human_owner: Sponsor and portfolio owner within confirmed delegation
   ai_action: Compare options, model dependencies and draft a feasible roadmap
   evidence_required:
   - Programme plan with confirmed and proposed resources separated
-  - Decision records including consequences of deferral
+  - Decision records including consequences of deferral, affected outcomes and tasks, dissent, accountable owners, and review or recovery triggers
   - System-assurance plan and linked evidence/gaps for affected decisions
   exit_condition: Affected work funded and owned; unfunded proposals remain proposals
   next_route: P05
@@ -225,6 +226,7 @@ stages:
   activities:
   - Create and review journeys, components, code, content and service procedures
   - Preserve exact asset versions and handoffs; evaluate early and iterate
+  - If delivery constraints change, assess access and participation impacts before changing scope; record alternatives, affected tasks and people, interim access, owners and corrective or recovery actions
   - Preserve system-to-implementation-to-test traceability and brand purpose through
     actual versions, variants and local configurations
   human_owner: Delivery lead with responsible engineering, design, editorial and operational
@@ -234,6 +236,7 @@ stages:
   evidence_required:
   - Reviewable versioned assets and requirement links
   - Handoff, unresolved decisions and review findings
+  - Material scope changes, evidence, access impacts, interim measures and recovery owners
   - System-assurance plan and linked evidence/gaps for affected decisions
   exit_condition: Implementation and production outputs ready for relevant evaluation
   next_route: P07
