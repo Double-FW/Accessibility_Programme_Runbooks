@@ -68,10 +68,11 @@ The role labels below are functions for local assignment, not claims that these 
 
 1. Compare interventions across policy, process, services, technology and capability.
 2. Agree outcomes, dependencies, resources, measures and accountable owners.
+3. When scope, budget or timing changes, assess effects on affected people and tasks; compare workable alternatives and document what will be preserved, deferred or changed, who owns each action, and how deferred access will be recovered..
 
 **Human owner:** Sponsor and portfolio owner within confirmed delegation. **AI support:** Compare options, model dependencies and draft a feasible roadmap.
 
-**Evidence and handoff:** Programme plan with confirmed and proposed resources separated; Decision records including consequences of deferral.
+**Evidence and handoff:** Programme plan with confirmed and proposed resources separated; decision records including consequences of deferral, affected outcomes and tasks, dissent, accountable owners, and review or recovery triggers.
 
 **Exit:** Affected work funded and owned; unfunded proposals remain proposals. **Next:** P05. **Return:** P03 if its scope or prerequisites need correction.
 
@@ -108,10 +109,11 @@ The role labels below are functions for local assignment, not claims that these 
 
 1. Create and review journeys, components, code, content and service procedures.
 2. Preserve exact asset versions and handoffs; evaluate early and iterate.
+3. If delivery constraints change, assess effects on access and participation before changing scope. Record alternatives, affected tasks and people, interim access where needed, accountable owners, and corrective or recovery actions.
 
 **Human owner:** Delivery lead with responsible engineering, design, editorial and operational owners. **AI support:** Draft code/content, review patterns and prepare candidate fixes in an approved environment.
 
-**Evidence and handoff:** Reviewable versioned assets and requirement links; Handoff, unresolved decisions and review findings.
+**Evidence and handoff:** Reviewable versioned assets and requirement links; handoff, unresolved decisions and review findings; material changes to scope, evidence, access, interim measures and recovery owners.
 
 **Exit:** Implementation and production outputs ready for relevant evaluation. **Next:** P07. **Return:** P05 if its scope or prerequisites need correction.
 
