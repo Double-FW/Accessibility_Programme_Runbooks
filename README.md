@@ -49,3 +49,11 @@ The [source-change process](framework/source-use-and-change.md) separates curren
 ## Adoption state
 
 The files and structural checker are implemented. The YAML is a data definition, not an agent runner, integration or enforcement service. Structural checks cannot establish evidence truth, authenticate approvals, establish legal compliance or demonstrate practical programme effectiveness. Independent review and an organisational pilot are pending. No live organisation's authority, funding or staffing is asserted.
+
+## About the author
+
+Gareth Ford Williams is a senior leader in accessibility and inclusive design and co-founder of Double FW Ltd. His work spans accessibility, UX, technical standards, assistive technology and inclusive media. At the BBC, he led accessibility and UX work and chaired standards governance, translating research and policy into practical guidance.
+
+## About Double FW Ltd
+
+Double FW Ltd is a UK accessibility and inclusive design consultancy. It helps organisations build accessibility into strategy, governance, brands, products, content and services. Its public repositories provide practical guidance for people and AI-assisted workflows.
